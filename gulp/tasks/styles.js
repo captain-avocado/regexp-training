@@ -18,7 +18,7 @@ const processors = [
     propList: ['*'],
     selectorBlackList: [],
     replace: true,
-    mediaQuery: true,
+    mediaQuery: false,
     minPixelValue: 0
   }),
   autoprefixer({
