@@ -19,6 +19,16 @@ function stylelintFn(done) {
     }))
 }
 
+function eslintFix() {
+  return gulp.src(config.src.scripts + '**/*.js')
+    .pipe(eslint({
+      fix: true,
+    }))
+    .pipe(eslint.format())
+    .pipe(gulp.dest(config.src.scripts));
+}
+
+gulp.task('eslint-fix', eslintFix);
 gulp.task('eslint', eslintFn);
 gulp.task('stylelint', stylelintFn)
 gulp.task('lint', gulp.parallel(
