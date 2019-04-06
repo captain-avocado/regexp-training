@@ -2,8 +2,25 @@
 
   &__item {
     position: relative;
-    &:not(:last-of-type) {
+
+    &:not(:last-child) {
       margin-bottom: 25px;
+    }
+
+    &.alert-left {
+      & .inputs__attention-left {
+        display: flex;
+      }
+    }
+    &.alert-right {
+      & .inputs__attention-right {
+        display: flex;
+      }    
+    }
+    &.alert-tooltip {
+      & .inputs__attention-tooltip {
+        display: flex;
+      }    
     }
 
     &--addr-fact {
@@ -22,6 +39,16 @@
     position: relative;
     display: flex;
     flex-direction: column;
+  }
+  &__input-wrap {
+    position: relative;
+
+    &:hover {
+      & .inputs__attention-tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
 
   &__input {
@@ -243,5 +270,58 @@
     width: 20px;
     height: 20px;
     transition: fill .25s;
+  }
+
+  &__match-text--prev {
+    font-size: 12px;
+    order: 1;
+    max-width: 178px;
+    margin-left: 10px;
+  }
+
+  &__attention-left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    align-items: center;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 90%;
+  }
+
+  &__attention-text {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  &__attention-right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display:  none;
+    justify-content: flex-end;
+    height: 90%;
+    width: 35px;
+    background-color: #fff;
+    border-radius: 10px;
+    
+  }
+
+  &__attention-tooltip {
+    position: absolute;
+    bottom: 115%;
+    right: 15px;
+    display: none;
+
+    font-size: 12px;
+    color: $purple;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .2s, opacity .2s;
   }
 }

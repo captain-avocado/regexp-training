@@ -119,6 +119,22 @@ $('#calendar-auth').submit((e) => {
 });
 
 
+function needConfirm() {
+  console.log($('#confirm-personal').prop('checked'), $('#confirm-terms').prop('checked'))
+
+  if ($('#confirm-personal').prop('checked') && $('#confirm-terms').prop('checked')) {
+    $('#confirm-block').css('opacity', '');
+    $('#confirm-block input').attr('disabled', false);
+  } else {
+    $('#confirm-block').css('opacity', .5);
+    $('#confirm-block input').attr('disabled', true);
+  }
+}
+
+needConfirm();
+$('#confirm-terms, #confirm-personal').on('change', needConfirm);
+
+
 popup();
 info();
 admin();
