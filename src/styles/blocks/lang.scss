@@ -1,0 +1,18 @@
+.lang {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  &__angle {
+    width: 7px;
+    height: 5px;
+    fill: $font-gray;
+
+    margin-left: 5px;
+  }
+}

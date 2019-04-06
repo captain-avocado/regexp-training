@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>Webiray</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <main class="main">
+      <div class="tool-bar">
+      </div>
+      <div class="main__content main__content--acc">
+        <div class="content content--acc">
+          <div class="content__manage">
+            <div class="content__manage-panels panels">
+              <div class="panels__col">
+                <div class="panel-container panel-container--is-active">
+                  <div class="content__manage-title">Данные ребенка</div>
+                  <div class="panel panel--web-create">
+                    <ul class="input-area__inputs inputs">
+                      <li class="inputs__item">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">Фамилия</div>
+                          <input type="text" class="inputs__input" name="child-f" id="child-f">
+                          <div class="inputs__hint"></div>
+                        </label>
+                      </li>
+                      <li class="inputs__item">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">Имя</div>
+                          <input type="text" class="inputs__input" name="child-i" id="child-i">
+                          <div class="inputs__hint"></div>
+                        </label>
+                      </li>
+                      <li class="inputs__item">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">Отчество</div>
+                          <input type="text" class="inputs__input" name="child-o" id="child-o">
+                          <div class="inputs__hint"></div>
+                        </label>
+                      </li>
+                      <li class="inputs__item">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">Дата рождения</div>
+                          <input type="text" class="inputs__input date-mask" id="child-dob" name="child-dob">
+                          <div class="inputs__hint"></div>
+                        </label>
+                      </li>
+                      <li class="inputs__item inputs__item--addr-fact">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">Адрес проживания</div>
+                          <input placeholder="например, Невский пр., дом 1, кв. 1" type="text"
+                            class="inputs__input inputs__input--addr-fact" id="child-adress_real"
+                            name="child-adress_real">
+                          <div class="inputs__hint"></div>
+                        </label>
+                      </li>
+                      <li class="inputs__item">
+                        <label class="inputs__match">
+                          <div class="inputs__match-text">Совпадает с адресом родителя</div>
+                          <input type="checkbox" class="inputs__match-check inputs__match--addr-reg"
+                            id="child-adress_ep" name="child-adress_ep">
+                          <div class="inputs__match-fake"></div>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="panel panel--web-create">
+                    <ul class="input-area__inputs inputs">
+                      <li class="inputs__item">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">Название команды</div>
+                          <div class="input-select not-active">
+                            <!-- <div class="dropdown-input">
+                            <div class="dropdown-input__wrapper">
+                              <ul class="dropdown-input__list">
+                                <li class="dropdown-input__item dropdown-search__item--lead">
+                                  <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                    Красная звезда
+                                    <img src="images/content/icon-active.svg" alt="icon-active"
+                                      class="dropdown-input__icon-active">
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div> -->
+                            <input type="text"
+                              class="team input-select__input select-input__input--timezone input-select__input--not-active"
+                              value="Красная звезда" id="child-command_name" name="child-command_name">
+                            <!-- <a href="#" class="input-select__dropdown-open">
+                            <img src="images/content/angle-search.svg" alt="open-dropdown"
+                              class="input-select__dropdown-icon">
+                          </a> -->
+                          </div>
+                        </label>
+                      </li>
+                      <li class="inputs__item">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">Год команды</div>
+                          <div class="input-select">
+                            <div class="dropdown-input">
+                              <div class="dropdown-input__wrapper">
+                                <ul class="dropdown-input__list">
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author6" data-type="lead">
+                                      2005
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author6" data-type="lead">
+                                      2006
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author6" data-type="lead">
+                                      2007
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author6" data-type="lead">
+                                      2008
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author6" data-type="lead">
+                                      2009
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author6" data-type="lead">
+                                      2010
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author6" data-type="lead">
+                                      2011
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author6" data-type="lead">
+                                      2012
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author6" data-type="lead">
+                                      2013
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <input type="text" class="year input-select__input select-input__input--timezone">
+                            <a href="#" class="input-select__dropdown-open">
+                              <img src="images/content/angle-search.svg" alt="open-dropdown"
+                                class="input-select__dropdown-icon" id="child-command_year" name="child-command_year">
+                            </a>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="inputs__item">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">Тренер команды</div>
+                          <div class="input-select">
+                            <div class="dropdown-input">
+                              <div class="dropdown-input__wrapper">
+                                <ul class="dropdown-input__list">
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Гришанов Николай Леонидович
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Виолентий Дмитрий Олегович
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Плотников Вадим Владимирович
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Голуб Владислав Игоревич
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Томилов Александр Анатольевич
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Чичелов Иван Александрович
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Костыгов Борис Николаевич
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Браславский Дмитрий Сергеевич
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Солянкин Марк Игоревич
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Могилевцев Сергей Евгениевич
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Щелоков Егор Алексеевич
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Терехин Сергей Сергеевич
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Фомич Андрей Витальевич
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Удалов Евгений Владимирович
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Сафронов Кирилл Алексеевич
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Солянкин Игорь Вадимович
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                  <li class="dropdown-input__item dropdown-search__item--lead">
+                                    <div class="dropdown-input__word" data-item="author1" data-type="lead">
+                                      Атрахимович Вадим Олегович
+                                      <img src="images/content/icon-active.svg" alt="icon-active"
+                                        class="dropdown-input__icon-active">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <input type="text" readonly class="input-select__input select-input__input--timezone"
+                              id="child-command_coach" name="child-command_coach">
+                            <a href="#" class="input-select__dropdown-open">
+                              <img src="images/content/angle-search.svg" alt="open-dropdown"
+                                class="input-select__dropdown-icon">
+                            </a>
+                          </div>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="panel panel--web-create panel--step">
+                  <a href="#" class="web-create__step web-create__step--save" id="save">
+                    Сохранить
+                  </a>
+                </div>
+                <div class="panel panel--web-create panel--step hidden">
+                  <a href="#" class="web-create__step web-create__step--plus" id="add">
+                    Добавить ребенка
+                    <img src="images/content/plus.svg" class="web-create__step-plus" alt="">
+                  </a>
+                </div>
+                <div class="web-create__step-panels">
+                  <div class="panel web-create__step-panel panel--web-create panel--step panel--prev">
+                    <a href="reg-adult.html" class="web-create__step">
+                      Назад
+                    </a>
+                  </div>
+                  <div class="panel web-create__step-panel panel--web-create panel--step panel--next">
+                    <a href="#" class="web-create__step">
+                      Далее
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="./scripts/main.js"></script>
+</body>
+
+</html>

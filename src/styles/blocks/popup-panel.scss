@@ -1,0 +1,22 @@
+.popup-panel {
+  position: absolute;
+  z-index: 100;
+  left: 110%;
+  top: 0;
+
+  background: #fff;
+  box-shadow: 0px 0px 12px rgba(111, 110, 255, 0.502);
+  border-radius: 15px;
+  width: 265px;
+  padding: 15px;
+  font-size: 12px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+
+  &--calendar {
+    padding: 5px 15px;
+    max-width: 200px;
+  }
+}

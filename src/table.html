@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>Webiray</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__logo">
+        <a href="#" class="logo">
+          <img class="logo__img" src="images/content/logo.svg" alt="logo">
+        </a>
+      </div>
+      <a href="./" class="header__text">Отчет по Управляющей компании: 18 - 29 Февраля 2019 г. </a>
+      <div class="header__info">
+        <div class="header__info-text">
+          <div class="header__info-time" id="time"></div>
+          <div class="header__info-date" id="date"></div>
+        </div>
+        <div class="header__avatar avatar" style="background-image: url(images/content/logo.svg)"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="tool-bar">
+
+      </div>
+      <div class="main__content">
+        <div class="content">
+          <div class="content__webinar-list webinar-list">
+            <ul class="webinar-list__list">
+              <li class="webinar-list__item webinar-list__item--is-active">
+                <a href="#" class="webinar-list__link">Все площадки</a>
+              </li>
+              <li class="webinar-list__item">
+                <a href="#" class="webinar-list__link">Большая ледовая арена</a>
+              </li>
+              <li class="webinar-list__item">
+                <a href="#" class="webinar-list__link">Малая ледовая арена</a>
+              </li>
+              <li class="webinar-list__item">
+                <a href="#" class="webinar-list__link">Большой зал</a>
+              </li>
+              <li class="webinar-list__item">
+                <a href="#" class="webinar-list__link">Малый зал</a>
+              </li>
+              <li class="webinar-list__item">
+                <a href="#" class="webinar__link">Настольный теннис</a>
+              </li>
+            </ul>
+          </div>
+          <div class="content__table">
+            <table class="table" id="table">
+            </table>
+            <div class="content__sum-price sum-price">
+              <div class="sum-price__sum">Итого:</div>
+              <div class="sum-price__price">
+                  <div class="price">
+                      <div class="price__text price__text--sum">20 000.00 руб</div>
+                      <a href="#" class="price__link">
+                        <svg class="price__icon">
+                          <use xlink:href="images/sprite.svg#angle-bottom"></use>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="price-dropdown">
+                      <ul class="price-dropdown__list">
+                        <li class="price-dropdown__item price-dropdown__item--sum">
+                          <div class="price-dropdown__price">6 60.00 руб</div>
+                          <div class="price-dropdown__state">УК</div>
+                        </li>
+                        <li class="price-dropdown__item price-dropdown__item--sum">
+                          <div class="price-dropdown__price">6 600.00 руб</div>
+                          <div class="price-dropdown__state">Клуб</div>
+                        </li>
+                        <li class="price-dropdown__item price-dropdown__item--sum">
+                          <div class="price-dropdown__price">6 6000.00 руб</div>
+                          <div class="price-dropdown__state">тренер</div>
+                        </li>
+                      </ul>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__logo">
+        <a href="#" class="logo">
+          <img class="logo__img" src="images/content/webiray.svg" alt="logo">
+        </a>
+      </div>
+      <div class="footer__text">
+        <div class="footer__info">Автоматизированная система WebiraySport</div>
+        <div class="footer__subinfo">Версия 1.0</div>
+      </div>
+      <div class="footer__more">
+        <a href="#" class="header__help">Помощь</a>
+      </div>
+    </footer>
+  </div>
+  <script src="./scripts/main.js"></script>
+  <script>
+
+  $.ajax({
+    type: "GET",
+    url: 'https://webiraylab.com/projects/redstar-admin/backend/endpoint.php',
+    cache: false,
+    xhrFields: { withCredentials:true },
+    data: ({
+        "method": "getLastPaymentsMarch",
+        "date": localStorage.getItem('date'),
+    }),
+    success: function(data) {
+      var response = JSON.parse(data);
+      console.log(response)
+      if (!response.ok) {
+        if (response.error.code === 'E_UNAUTHORIZED') {
+          location.href = 'auth-admin.html';
+        } else {
+          showPopup('Системная ошибка');
+        }
+        return;
+      } 
+
+      var str = "";
+      str += `<tr class="table table__row table__row--header">
+                <th class="table__cell table__cell--ff" style="width: 9%;">Дата</th>
+                <th class="table__cell" style="width: 12%;">Период оплаты</th>
+                <th class="table__cell" style="width: 16%;">Объект</th>
+                <th class="table__cell" style="width: 12%;">Услуга</th>
+                <th class="table__cell" style="width: 9%;">Транзакция №</th>
+                <th class="table__cell" style="width: 11%;">Способ оплаты</th>
+                <th class="table__cell table__cell--fl" style="width: 19%;">Внесенная сумма</th>
+              </tr>`;
+
+      for(var i = 0; i < response.data.payments.length; i++) {
+        str += `<tr class="table table__row">
+                <td class="table__cell">${response.data.payments[i].ts}</td>
+                <td class="table__cell">Март 2019</td>
+                <td class="table__cell">${response.data.payments[i].place}</td>
+                <td class="table__cell">${response.data.payments[i].type}</td>
+                <td class="table__cell">${response.data.payments[i].id}</td>
+                <td class="table__cell">${response.data.payments[i].trm_id}</td>
+                <td class="table__cell table__cell--fl">
+                  <div class="price">
+                    <div class="price__text">${response.data.payments[i].summ} руб</div>
+                    <a href="#" class="price__link">
+                      <svg class="price__icon">
+                        <use xlink:href="images/sprite.svg#angle-bottom"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="price-dropdown">
+                    <ul class="price-dropdown__list">
+                      <li class="price-dropdown__item">
+                        <div class="price-dropdown__price">${response.data.payments[i].summ} руб</div>
+                        <div class="price-dropdown__state">УК</div>
+                      </li>
+                      <li class="price-dropdown__item">
+                        <div class="price-dropdown__price">${response.data.payments[i].summ} руб</div>
+                        <div class="price-dropdown__state">Клуб</div>
+                      </li>
+                      <li class="price-dropdown__item">
+                        <div class="price-dropdown__price">${response.data.payments[i].summ} руб</div>
+                        <div class="price-dropdown__state">тренер</div>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>`; 
+        }
+        document.getElementById('table').innerHTML = str;
+        $('.price__link').on('click', (e) => {
+          e.preventDefault();
+          const parent = e.currentTarget.parentElement.parentElement;
+          parent.querySelector('.price__icon').classList.toggle('price__icon--is-active');
+          parent.querySelector('.price-dropdown').classList.toggle('price-dropdown--is-active');
+        });
+    }, 
+    
+    fail: function() {
+      showPopup('Cетевая ошибка');
+    }
+
+    
+  });
+
+
+  ///текущее время
+  setInterval(function(){
+	var monthes = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
+    var dt = new Date();
+	var h = dt.getHours();
+	var m = dt.getMinutes();
+	var s = dt.getSeconds();
+	var d = dt.getDate();
+	var mn = monthes[dt.getMonth()];
+	var y = dt.getFullYear();
+	
+	if (h < 10) h = '0' + h;
+	if (m < 10) m = '0' + m;
+	if (s < 10) s = '0' + s;
+	if (d < 10) d = '0' + d;
+
+    document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+    document.getElementById('date').innerHTML =  d + " " + mn + " " + y;
+
+  },1000);
+  
+  </script>
+</body>
+
+</html>

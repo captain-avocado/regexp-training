@@ -1,0 +1,11 @@
+.discount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px !important;
+
+  &__percents {
+    color: $purple;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>Webiray</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <main class="main">
+      <div class="tool-bar">
+      </div>
+      <div class="main__content main__content--acc">
+        <div class="content content--acc">
+          <div class="content__manage">
+            <div class="content__manage-panels panels">
+              <form id="recovery" class="panels__col">
+                <div class="panel panel--web-create">
+                  <div class="panel__auth-content">
+                    <div class="panel__auth-title">Новый код-пароль</div>
+                    <div class="panel__recovery recovery">
+                      <div class="recovery__text">Вам был отправлен код подтверждения</div>
+                      <a href="#" class="recovery__link">
+                        <svg class="recovery__icon">
+                          <use xlink:href="images/sprite.svg#recovery"></use>
+                        </svg>
+                      </a>
+                    </div>   
+                    <ul class="input-area__inputs inputs">
+                      <li class="inputs__item">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">Код (пароль)</div>
+                          <input type="text" class="inputs__input  code-mask">
+                        </label>
+                      </li>
+                  </div>
+                </div>
+                <div class="web-create__step-panels">
+                  <div class="panel panel--web-create panel--step panel--prev">
+                    <a href="auth.html" class="web-create__step">
+                      Назад
+                    </a>
+                  </div>
+                  <div class="panel panel--web-create panel--step panel--next">
+                    <a href="auth.html" class="web-create__step">
+                      Готово
+                    </a>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+  <script src="./scripts/main.js"></script>
+</body>
+
+</html>

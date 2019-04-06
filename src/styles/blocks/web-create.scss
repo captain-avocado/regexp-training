@@ -1,0 +1,69 @@
+.web-create {
+  
+  &__header {
+    margin-bottom: 75px;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    color: #343442;
+    text-align: center;
+    margin: 23px 0;
+  }
+
+  &__inputs-title {
+    margin-bottom: 20px;
+  }
+
+  &__info-types {
+    margin: 8px 0 50px;
+    width: 100%;
+    & div {
+      flex: 1;
+    }
+  }
+
+  &__step {
+    padding: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    justify-content: center;
+    color: #5E5E7B;
+    transition: color .2s;
+    &:hover {
+      color: $purple;
+    }
+
+    &--plus {
+        padding: 10px;
+    }
+    
+    &--plus, &--save {
+      color: $purple;
+    }
+  }
+
+  &__step-panels {
+    display: flex;
+  }
+
+  &__step-panel {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__step-plus {
+    margin-left: 10px;
+  }
+}

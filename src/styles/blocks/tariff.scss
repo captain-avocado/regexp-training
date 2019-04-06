@@ -1,0 +1,32 @@
+.tariff {
+
+  &__title {
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__btn {
+    padding: 7px 13px;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(90deg, #6B69F9 0%, #6F6EFF 100%);
+    border-radius: 4px;
+    transition: box-shadow .2s;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 0px 12px rgba(111, 110, 255, 0.502);
+    }
+
+    margin-bottom: 35px;
+  }
+
+  &__input-area {
+    width: 100%;
+  }
+}

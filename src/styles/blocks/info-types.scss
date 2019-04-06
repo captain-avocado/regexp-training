@@ -1,0 +1,84 @@
+.info-types {
+  align-self: center;
+  display: flex;
+  border: 1px solid #5E5E7B;
+  padding: 3px;
+  border-radius: 20px;
+  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content;    /* Firefox/Gecko */
+  width: -webkit-max-content; 
+  width: 220px;
+
+  &--visits {
+    width: 155px;
+  }
+
+  &--debtors, &--auth {
+    width: 255px;
+  }
+
+  &--admin {
+    width: 100%;
+  }
+
+  &--calendar {
+    // box-sizing: content-box;
+  }
+
+
+
+  &__type {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 15px;
+  cursor: pointer;
+
+  @include phones {
+    font-size: 12px;
+    // width: 77px;
+  }
+
+  &--small {
+    flex: .8;
+  }
+
+  
+
+    &--is-active {
+      background-color: $purple;
+      color: #fff;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__text {
+    padding: .125rem 0;
+    border-radius: .9375rem;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+
+    &--calendar {
+      padding: 0;
+    }
+  }
+
+  &__radio {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__radio:checked + &__text {
+    background-color: $purple;
+    color: #fff;
+  }
+}

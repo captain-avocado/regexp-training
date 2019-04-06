@@ -1,0 +1,247 @@
+.inputs {
+
+  &__item {
+    position: relative;
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
+
+    &--addr-fact {
+      margin-bottom: 10px !important;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    outline: none;
+    width: 100%;
+    border: 1px solid #5E5E7B;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #5E5E7B;
+    transition: background-color .2s;
+
+    &--fake {
+      height: 38.6px;
+      color: rgba(#5e5e7b, .5);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &--fee {
+      width: 240px;
+      min-height: 38px;
+    }
+    
+
+    &--addr {
+      margin-bottom: 25px;
+    }
+
+    &--is-active {
+      background-color: #f2f2f8;
+      z-index: 100;
+    }
+
+    &::placeholder {
+      opacity: .5;
+    }
+  }
+
+  &__fee {
+    display: flex;
+  }
+
+  &__fee-status {
+    border-radius: 20px;
+    flex: 1;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    &--debt {
+      background: #FF8900;
+    }
+
+    &--paid {
+      background-color: $purple;
+    }
+
+    &--not-paid {
+      background-color: #5E5E7B;
+    }
+  }
+
+  &__file {
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__hint {
+    font-size: 12px;
+    color: #5E5E7B;
+    opacity: .5;
+    margin-left: 15px;
+
+    &--last {
+      margin-top: 5px;
+    }
+
+    &--lead {
+      opacity: 1;
+      font-size: 12px;
+      margin-bottom: 35px; 
+    }
+
+    &--forgot {
+      font-size: 14px;
+      opacity: 1;
+      margin-left: auto;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__download {
+    display: flex;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__download-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  &__match {
+    font-size: 12px;
+    color: #5E5E7B;
+    padding-left: 15px;
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    &--reg {
+      font-size: 14px;
+      margin-bottom: 0;
+      &:not(:last-of-type) {
+        margin-bottom: 15px;
+      }
+      padding-left: 0;
+      justify-content: center;
+    }
+
+  }
+
+  &__match-text {
+    &--reg {
+      width: 200px;
+      margin-left: 9px;
+    }
+  }
+
+  &__match-check {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__match-check:checked + &__match-fake:after {
+    opacity: 1;
+  }
+
+  &__match-fake {
+    width: 18px;
+    height: 18px;
+    border: 2.04546px solid #5E5E7B;
+    border-radius: 50%;
+    margin-left: 10px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      transform-origin: 50% 50%;
+      width: 4px;
+      height: 8px;
+      border-right: 2px solid #5E5E7B;
+      border-bottom: 2px solid #5E5E7B;
+      opacity: 0;
+    }
+  }
+
+  &__dropdown-icon--select {
+    transition: transform .2s;
+  }
+
+  &__dropdown-open {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 70px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--is-active {
+      z-index: 100;
+
+      & .inputs__dropdown-icon--select {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__show-pass {
+    position: absolute;
+    bottom: 8px;
+    right: 15px;
+    display: flex;
+    fill: #5E5E7B;
+
+    &:hover, &--is-active {
+      fill: $purple;
+    }
+  }
+
+  &__show-icon {
+    width: 20px;
+    height: 20px;
+    transition: fill .25s;
+  }
+}

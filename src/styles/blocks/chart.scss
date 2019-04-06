@@ -1,0 +1,11 @@
+.chart {
+  &__svg {
+    width: 100%;
+  }
+
+  &__text {
+    fill: #fff;
+    font-family: 'Montserrat';
+    font-size: 5px;
+  }
+}

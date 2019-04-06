@@ -1,0 +1,50 @@
+.create-steps {
+  background-color: #fff;
+  padding: 30px 82px;
+  border-radius: 15px;
+
+  display: flex;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    opacity: .4;
+
+    &--is-active {
+      opacity: 1;
+    }
+
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+  }
+
+  &__point {
+    width: 13px;
+    height: 13px;
+    background-color: $purple;
+    border-radius: 50%;
+  }
+
+  &__text {
+    line-height: 17px;
+    font-size: 18px;
+    text-align: center;
+    color: #343442;
+    max-width: 105px;
+  }
+
+  &__num {
+    width: 60px;
+    height: 60px;
+    background: #6F6EFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+  }
+}

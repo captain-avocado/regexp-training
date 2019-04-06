@@ -1,10 +1,10 @@
-@mixin tablets {
+@mixin laptops {
   @media (max-width: 1200px) {
     @content;
   }
 }
 
-@mixin phones {
+@mixin tablets {
   @media (max-width: 760px) {
     @content;
   }
@@ -12,6 +12,12 @@
 
 @mixin phones-landscape {
   @media (max-width: 760px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media (max-width: 450px) {
     @content;
   }
 }

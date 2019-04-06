@@ -1,0 +1,49 @@
+.content {
+  flex: 1;
+
+  &--acc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__table {
+    background: #FFFFFF;
+    border-radius: 15px;
+    width: 104%;
+  }
+
+  &__sum-price {
+    width: 104%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__img {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  &__webinar-list {
+    margin-top: 33px;
+    margin-bottom: 13px;
+
+    @include phones {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__manage-title {
+    font-size: 18px;
+    margin-bottom: 25px;
+    @include phones {
+      display: none;
+    }
+  }
+
+  &__manage--acc {
+    padding-top: 40px;
+  }
+}

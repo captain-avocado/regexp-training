@@ -1,0 +1,21 @@
+.tool-bar {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  
+  // background-color: #fff;
+  transition: background-color .35s;
+  flex: 1;
+  max-width: 75px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+
+  @include phones {
+    z-index: 10;
+  }
+
+  &__color-mode {
+    margin-top: auto;
+  }
+}

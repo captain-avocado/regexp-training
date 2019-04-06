@@ -1,0 +1,12 @@
+.exts {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px;
+  }
+
+  &__item {
+    padding: 8px;
+    width: 50%;
+  }
+}
