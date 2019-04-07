@@ -107,7 +107,6 @@ $('.calendar__cell').on('click', (e) => {
 
 $('.webinar-list__link').on('click', e => {
   e.preventDefault();
-  console.log('efefef')
   $('.popup-input').addClass('popup-input--is-active');
 });
 
@@ -120,8 +119,6 @@ $('#calendar-auth').submit((e) => {
 
 
 function needConfirm() {
-  console.log($('#confirm-personal').prop('checked'), $('#confirm-terms').prop('checked'))
-
   if ($('#confirm-personal').prop('checked') && $('#confirm-terms').prop('checked')) {
     $('#confirm-block').css('opacity', '');
     $('#confirm-block input').attr('disabled', false);
@@ -131,8 +128,19 @@ function needConfirm() {
   }
 }
 
+//чекбоксы условий
 needConfirm();
 $('#confirm-terms, #confirm-personal').on('change', needConfirm);
+
+//попап-хелп
+$('.popup__trigger').on('click', (e) => {
+  e.preventDefault();
+  e.target.closest('.popup').classList.remove('popup--is-active');
+});
+$('.footer__help').on('click', (e) => {
+  e.preventDefault();
+  $('.popup--help').addClass('popup--is-active');
+});
 
 
 popup();

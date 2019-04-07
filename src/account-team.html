@@ -20,7 +20,10 @@
       </div>
       <a href="./" class="header__text">Личный кабинет Члена Клуба</a>
       <div class="header__info">
-        <a href="#" class="header__help">Помощь</a>
+        <div class="header__date-info">
+          <div class="header__time">12:23:23</div>
+          <div class="header__date">23 марта 2019</div>
+        </div>
         <div class="header__more">
           <div class="header__avatar avatar" style="background-image: url(images/content/logo.svg)"></div>
           <div class="acc-dropdown">
@@ -59,7 +62,8 @@
                       </a>
                     </li>
                     <li class="menu-panel__item">
-                      <a href="account-team.html" class="menu-panel__link menu-panel__link--is-active menu-panel__link--hidden">
+                      <a href="account-team.html"
+                        class="menu-panel__link menu-panel__link--is-active menu-panel__link--hidden">
                         Команда
                       </a>
                     </li>
@@ -74,14 +78,14 @@
               <div class="panels__col">
                 <div class="panel panel--tmp">
                   <div class="panel__text">
-                      Данный раздел Личного кабинета находится в процессе доработки. 
-                      <br>
-                      Совсем скоро он станет доступен!
+                    Данный раздел Личного кабинета находится в процессе доработки.
+                    <br>
+                    Совсем скоро он станет доступен!
                   </div>
                   <div class="panel__text">
-                      Для получения дополнительной информации
-                      <br>
-                      напишите нам на почту
+                    Для получения дополнительной информации
+                    <br>
+                    напишите нам на почту
                   </div>
                   <a class="panel__link" href="mailto:support@webiraysport.com">support@webiraysport.com</a>
                 </div>
@@ -334,6 +338,29 @@
         <a href="#" class="footer__help">Помощь</a>
       </div>
     </footer>
+  </div>
+  <div class="popup popup--help">
+    <div class="popup__content">
+      <div class="panel panel--web-create">
+        <div class="panel__auth-content">
+          <div class="panel__text panel__text--help">Если у Вас возникли вопрос или затруднение, напишите, пожалуйста,
+            нам на почту</div>
+          <a href="mailto:support@webiraysport.com" class="panel__link panel__link--auth">support@webiraysport.com</a>
+        </div>
+      </div>
+      <div class="web-create__step-panels">
+        <div class="panel web-create__step-panel panel--web-create panel--step panel--prev">
+          <a href="#" class="web-create__step popup__trigger">
+            Назад
+          </a>
+        </div>
+        <div class="panel web-create__step-panel panel--web-create panel--step panel--next">
+          <a href="#" class="web-create__step popup__trigger">
+            Готово
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="./scripts/main.js"></script>
 </body>

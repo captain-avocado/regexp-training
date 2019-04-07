@@ -1,16 +1,9 @@
 export default (function childAcc() {
   const panelContainer = document.querySelector('.panels__container--is-active');
   if (panelContainer === null) return;
-  // const save = panelContainer.querySelector('.save');
-  // const add = panelContainer.querySelector('.add');
   const save = panelContainer.querySelector('#save');
   const add = panelContainer.querySelector('#add').parentElement;
-  // save.parentElement.parentElement.removeChild(save.parentElement);
-  console.log(add)
   panelContainer.removeChild(add);
-
-
-
 
   let children = [
     {
@@ -101,7 +94,6 @@ export default (function childAcc() {
   }
 
   function openTab() {
-    console.log(panelContainer)
     panelContainer.classList.remove('hidden');
     add.parentElement.removeChild(add);
   }
