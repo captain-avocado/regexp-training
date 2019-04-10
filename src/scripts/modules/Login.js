@@ -1,4 +1,4 @@
-class Anketa {
+class Login {
 
   static getActivePage() {
     return document.querySelector('.page:not(.disabled)');
@@ -7,7 +7,7 @@ class Anketa {
   static setActivePage(id) {
     //console.log( getActivePage() );
     // if (id == 'page-submit')
-    //   Anketa.trySubmit();
+    //   Login.trySubmit();
     // else
     document.querySelectorAll('.page').forEach((el) => {
       if (el.id == id)
@@ -15,11 +15,11 @@ class Anketa {
       else
         el.classList.add('disabled');
     });
-    return Anketa;
+    return Login;
   }
 
   static setup() {
-    Anketa.setActivePage('page-begin');
+    Login.setActivePage('page-login');
     document.querySelectorAll('.btn-pagenav').forEach((btn) => {
       btn.addEventListener('click', (ev) => {
         ev.preventDefault();
@@ -27,16 +27,16 @@ class Anketa {
         let direction = btn.getAttribute('data-direction');
         let chosen_id = btn.getAttribute('data-pageid');
 
-        Anketa.setActivePage(chosen_id);
+        Login.setActivePage(chosen_id);
         // if (chosen_id == 'page-submit')
-        //   Anketa.setActivePage('page-submit');
+        //   Login.setActivePage('page-submit');
 
         // console.log(
         //   Input.on(btn.closest('.page')).allVisibleControls()
         //     .reduce((values, control) => values[control.id] = control.currentValue, {}));
 
         // let okay_boss
-        //   = () => Anketa.setActivePage(chosen_id);
+        //   = () => Login.setActivePage(chosen_id);
         // let rollup_sucks
         //   = () => Input.on(btn.closest('.page')).firstControlHavingNoHiddenParentsAnd('.alert')
         //     .scrollIntoCenter();
@@ -49,9 +49,9 @@ class Anketa {
 
       });
     });
-    return Anketa;
+    return Login;
   }
 
 }
 
-export default Anketa;
+export default Login;

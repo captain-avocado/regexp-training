@@ -17,6 +17,7 @@ import childAcc from './modules/childAcc';
 
 import Anketa from './modules/Anketa';
 import Cabinet from './modules/Cabinet';
+import Login from './modules/Login';
 
 import $ from 'jquery';
 import mask from 'jquery-mask-plugin';
@@ -29,6 +30,11 @@ if (document.body.id === 'anketa') {
 if (document.body.id === 'cabinet') {
   Cabinet.setup();
 }
+
+if (document.body.id === 'login') {
+  Login.setup();
+}
+
 
 $('.team,.year').attr('readonly', 'true');
 $('.tel-mask').mask('+7 (000) 000-00-00', {

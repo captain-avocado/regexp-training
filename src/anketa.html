@@ -19,7 +19,7 @@
       <div class="main__content main__content--acc">
         <div class="content content--acc">
           <div class="content__manage">
-            <div class="default page" id="default">
+            <div class="default page" id="page-begin">
 
               <div class="default__wrap">
                 <div class="default__text-block">Приветствуем Вас в личном кабинете члена клуба «Красная звезда»!
@@ -31,11 +31,12 @@
                     самих услугах.
                   </div>
                 </div>
-                <a href="#" data-direction="forward" data-pageid="reg-adult" class="btn-pagenav default__btn">Начать
+                <a href="#" data-direction="forward" data-pageid="page-parent-card"
+                  class="btn-pagenav default__btn">Начать
                   заполнение</a>
               </div>
             </div>
-            <div class="page" id="reg-adult">
+            <div class="page" id="page-parent-card">
               <div class="content__manage">
                 <div class="content__manage-title">Данные родителя</div>
                 <div class="content__manage-panels panels">
@@ -291,13 +292,13 @@
                     </div>
                     <div class="web-create__step-panels">
                       <div class="panel web-create__step-panel panel--web-create panel--step panel--prev">
-                        <a href="#" data-direction="backward" data-pageid="default"
+                        <a href="#" data-direction="backward" data-pageid="page-begin"
                           class="btn-pagenav web-create__step">
                           Назад
                         </a>
                       </div>
                       <div class="panel web-create__step-panel panel--web-create panel--step panel--next">
-                        <a href="#" data-direction="forward" data-pageid="reg-child"
+                        <a href="#" data-direction="forward" data-pageid="page-child-cards"
                           class="btn-pagenav web-create__step">
                           Далее
                         </a>
@@ -308,7 +309,7 @@
                 </div>
               </div>
             </div>
-            <div class="page content__manage-panels panels" id="reg-child">
+            <div class="page content__manage-panels panels" id="page-child-cards">
               <div class="panels__col panels__col--child-reg">
                 <div class="panel-container panel-container--is-active">
                   <div class="content__manage-title">Данные ребенка</div>
@@ -626,12 +627,13 @@
                 </div>
                 <div class="web-create__step-panels">
                   <div class="panel web-create__step-panel panel--web-create panel--step panel--prev">
-                    <a href="#" data-direction="backward" data-pageid="reg-adult" class="btn-pagenav web-create__step">
+                    <a href="#" data-direction="backward" data-pageid="page-parent-card"
+                      class="btn-pagenav web-create__step">
                       Назад
                     </a>
                   </div>
                   <div class="panel web-create__step-panel panel--web-create panel--step panel--next">
-                    <a href="#" data-direction="forward" data-pageid="" class="btn-pagenav web-create__step">
+                    <a href="#" data-direction="forward" data-pageid="page-submit" class="btn-pagenav web-create__step">
                       Далее
                     </a>
                   </div>
