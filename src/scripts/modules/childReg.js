@@ -23,7 +23,10 @@ export default (function childReg() {
       el.setAttribute('disabled', 'true');
     });
 
-    const panelCols = document.querySelector('.panels__col');
+    const panelCols = document.querySelector('.panels__col--child-reg');
+    console.log(panelCols)
+    console.log(panelContainer)
+
     panelCols.insertBefore(containerCopy, panelContainer);
 
 

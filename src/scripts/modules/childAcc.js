@@ -1,5 +1,5 @@
 export default (function childAcc() {
-  const panelContainer = document.querySelector('.panels__container--is-active');
+  const panelContainer = document.querySelector('.panels__container--child.panels__container--is-active');
   if (panelContainer === null) return;
   const save = panelContainer.querySelector('#save');
   const add = panelContainer.querySelector('#add').parentElement;
@@ -21,7 +21,7 @@ export default (function childAcc() {
 
 
   function updateData(children) {
-    let panelContainerNotActive = document.querySelectorAll('.panels__container');
+    let panelContainerNotActive = document.querySelectorAll('.panels__container--child');
 
     panelContainerNotActive = Array.from(panelContainerNotActive).filter(el => !el.classList.contains('panels__container--is-active'));
 

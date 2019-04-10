@@ -11,13 +11,24 @@ import reg from './modules/reg';
 import popup from './modules/popup';
 import popupInput from './modules/popupInput';
 import info from './modules/info';
+import renderPage from './modules/renderPage';
 import childReg from './modules/childReg';
 import childAcc from './modules/childAcc';
 
+import Anketa from './modules/Anketa';
+import Cabinet from './modules/Cabinet';
 
 import $ from 'jquery';
 import mask from 'jquery-mask-plugin';
 import validation from 'jquery-validation';
+
+if (document.body.id === 'anketa') {
+  Anketa.setup();
+}
+
+if (document.body.id === 'cabinet') {
+  Cabinet.setup();
+}
 
 $('.team,.year').attr('readonly', 'true');
 $('.tel-mask').mask('+7 (000) 000-00-00', {
