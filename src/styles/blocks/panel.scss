@@ -38,6 +38,37 @@
     padding: 50px 0 35px;
   }
 
+  &--auth {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+  }
+
+  &__back-icon {
+    margin-right: 5px;
+  }
+
+  &__title-auth {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__title-auth-text {
+    justify-self: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__link {
+    align-self: center;
+  }
+
   &__text {
     &:not(:last-of-type) {
       margin-bottom: 50px;
@@ -79,7 +110,6 @@
 
   &__tmp {
     text-align: center;
-    display: none;
   }
 
   &__link {

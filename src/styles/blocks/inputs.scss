@@ -3,7 +3,7 @@
   &__item {
     position: relative;
 
-    &:not(:last-child) {
+    &:not(:last-child), &:not(+.disabled) {
       margin-bottom: 25px;
     }
 
@@ -185,8 +185,6 @@
       &:not(:last-of-type) {
         margin-bottom: 15px;
       }
-      padding-left: 0;
-      justify-content: center;
     }
 
   }

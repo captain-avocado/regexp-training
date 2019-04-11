@@ -23,6 +23,12 @@ import $ from 'jquery';
 import mask from 'jquery-mask-plugin';
 import validation from 'jquery-validation';
 
+import { setLogin, setRegister, setBegin, setup } from './modules/log.js';
+
+//setup - самовызывающийся установщик
+//setLogin/setRegister/setBegin - устанавливают нужный экран
+
+
 if (document.body.id === 'anketa') {
   Anketa.setup();
 }
