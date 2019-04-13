@@ -5,8 +5,11 @@ export default function match() {
   const inputReg = document.querySelector('.inputs__input--addr-reg');
   const inputFact = document.querySelector('.inputs__input--addr-fact');
 
+  console.log(inputReg)
+  console.log(inputFact)
+
   function copyInput() {
-    inputFact.value = inputReg.value;  
+    inputFact.value = inputReg.value;
   }
 
   matchCheckbox.addEventListener('input', () => {
@@ -19,6 +22,6 @@ export default function match() {
       inputFact.removeAttribute('readonly', 'false');
     }
   });
-  
-  
+
+
 }

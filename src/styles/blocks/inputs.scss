@@ -28,6 +28,24 @@
     }
   }
 
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__require {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+
+    display: none;
+
+    &--is-active {
+      display: flex;
+    }
+  }
+
   &__text {
     font-size: 14px;
     margin-left: 15px;

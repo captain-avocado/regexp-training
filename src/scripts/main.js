@@ -29,17 +29,17 @@ import { setLogin, setRegister, setBegin, setup } from './modules/log.js';
 //setLogin/setRegister/setBegin - устанавливают нужный экран
 
 
-if (document.body.id === 'anketa') {
-  Anketa.setup();
-}
+// if (document.body.id === 'anketa') {
+//   Anketa.setup();
+// }
 
-if (document.body.id === 'cabinet') {
-  Cabinet.setup();
-}
+// if (document.body.id === 'cabinet') {
+//   Cabinet.setup();
+// }
 
-if (document.body.id === 'login') {
-  Login.setup();
-}
+// if (document.body.id === 'login') {
+//   Login.setup();
+// }
 
 
 $('.team,.year').attr('readonly', 'true');
@@ -145,9 +145,13 @@ function needConfirm() {
   if ($('#confirm-personal').prop('checked') && $('#confirm-terms').prop('checked')) {
     $('#confirm-block').css('opacity', '');
     $('#confirm-block input').attr('disabled', false);
+    $('#next-confirm').css('opacity', '');
+    $('#next-confirm').removeClass('link-disabled');
+
   } else {
     $('#confirm-block').css('opacity', .5);
     $('#confirm-block input').attr('disabled', true);
+    $('#next-confirm').addClass('link-disabled');
   }
 }
 

@@ -71,3 +71,10 @@ body {
   margin-bottom: 0 !important;
 }
 
+.link-disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: .5;
+}
+
+

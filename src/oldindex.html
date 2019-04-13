@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>Webiray</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <main class="main">
+      <div class="tool-bar">
+      </div>
+      <div class="main__content main__content--acc">
+        <div class="content content--acc">
+          <div class="content__manage">
+            <div class="content__manage-panels panels">
+              <form id="admin-reg" class="panels__col">
+                <div class="panel panel--web-create">
+                  <div class="panel__auth-content">
+                    <div class="panel__auth-title">Регистрация</div>
+                    <div class="panel__info-types panel__auth-info-types info-types info-types--admin">
+                      <label class="info-types__type">
+                        <input type="radio" class="info-types__radio" id="admin" name="level" value="ADMIN" checked>
+                        <div class="info-types__text">
+                          Администратор
+                        </div>
+                      </label>
+                      <label class="info-types__type">
+                        <input type="radio" class="info-types__radio" id="root-admin" name="level" value="MAINADMIN">
+                        <div class="info-types__text">
+                          Ст. Администратор
+                        </div>
+                      </label>
+                      <label class="info-types__type info-types__type--small">
+                        <input type="radio" class="info-types__radio" id="boss" name="level" value="FOUNDER">
+                        <div class="info-types__text">
+                          Учредитель
+                        </div>
+                      </label>
+                    </div>
+                    <ul class="input-area__inputs inputs">
+                      <li class="inputs__item">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">E-mail</div>
+                          <input type="email" name="email" required class="inputs__input" data-complete="false"
+                            placeholder="admin@example.com" id="email">
+                        </label>
+                      </li>
+                      <!-- <div class="panel__reg-tmp"> -->
+                      <!-- <div class="panel__recovery recovery">
+                          <div class="recovery__text">Вам на почту был отправлен код подтверждения</div>
+                          <a href="#" class="recovery__link">
+                            <svg class="recovery__icon">
+                              <use xlink:href="images/sprite.svg#recovery"></use>
+                            </svg>
+                          </a>
+                        </div> -->
+                      <li class="inputs__item">
+                        <label for="" class="inputs__label">
+                          <div class="inputs__text">Пароль</div>
+                          <input type="password" id="password" minlength="8" name="password" class="inputs__input"
+                            data-complete="false" placeholder="••••••••" required>
+                          <a href="#" class="inputs__show-pass">
+                            <svg class="inputs__show-icon">
+                              <use xlink:href="images/sprite.svg#show"></use>
+                            </svg>
+                          </a>
+                        </label>
+                      </li>
+                      <div class="panel__text panel__text--admin">Пароль должен состоять не менее, чем из 8 символов.
+                      </div>
+                      <!-- </div> -->
+                  </div>
+                </div>
+                <div class="web-create__step-panels">
+                  <div class="panel web-create__step-panel panel--web-create panel--step panel--prev">
+                    <a href="auth-admin.html" class="web-create__step">
+                      Назад
+                    </a>
+                  </div>
+                  <div class="panel web-create__step-panel panel--web-create panel--step panel--next">
+                    <button type="submit" id="reg-btn-admin" class="web-create__step">
+                      Готово
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="popup-input">
+      <div class="popup-input__content">
+        <div class="popup-input__inner-text">
+          Необходимо заполнить <br> все поля
+        </div>
+        <a href="#" class="popup-input__trigger">
+          <img src="images/content/close.svg" clas="popup-input__icon">
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <script src="./scripts/main.js"></script>
+</body>
+
+</html>

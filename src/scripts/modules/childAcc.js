@@ -31,19 +31,13 @@ export default (function childAcc() {
       });
     }
 
-    // save.parentElement.parentElement.removeChild(save.parentElement);
     children.forEach((child, i) => {
       const panelContainerClone = panelContainer.cloneNode(true);
-      // parentElementClone.removeChild(add.parentElement);
-      // parentElementClone.removeChild(save.parentElement);
 
       if (i === children.length - 1) {
         panelContainerClone.appendChild(add);
-        // panelContainerClone.querySelector('.add').parentElement.classList.remove('hidden');
       }
-      // } else {
-      //   panelContainerClone.querySelector('.add').parentElement.classList.add('hidden');
-      // }
+
       panelContainerClone.classList.remove('panels__container--is-active');
       panelContainerClone.querySelector('.save').parentElement.classList.add('hidden');
 
@@ -74,6 +68,14 @@ export default (function childAcc() {
     return valid;
   }
 
+  const setParentAddress = (check) => {
+    const parentAddress = document.getElementById('address_reg').value;
+    const childAddrInput = document.getElementById('child-adress_real');
+    childAddrInput.value = (check) ? (parentAddress) : '';
+  }
+
+
+
   function addData(e) {
     e.preventDefault();
     // if (!validateData()) return;
@@ -99,6 +101,12 @@ export default (function childAcc() {
   }
 
   updateData(children);
+
+  const childAddrCheckbox = document.getElementById('child-adress_ep');
+  childAddrCheckbox.addEventListener('change', (e) => {
+    console.log('hello')
+    setParentAddress(childAddrCheckbox.checked);
+  });
 
   save.addEventListener('click', addData);
   add.addEventListener('click', openTab);
