@@ -17,8 +17,8 @@ function rollupJS(done) {
     })
     .pipe(source('main.js', config.src.scripts))
     .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.init({loadMaps: true}))
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.dest.scripts));
 }
 

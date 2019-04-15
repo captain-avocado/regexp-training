@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
     "autoprefixer": "^9.3.1",
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -20,10 +22,16 @@
     "browser-sync": "^2.26.3",
     "cssnano": "^4.1.7",
     "del": "^3.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.17.1",
+    "eslint-plugin-prettier": "^3.0.1",
     "gulp": "^4.0.0",
     "gulp-cache": "^1.0.2",
     "gulp-cheerio": "^0.6.3",
-    "gulp-eslint": "^4.0.2",
+    "gulp-eslint": "^5.0.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "^1.2.1",
@@ -42,19 +50,18 @@
     "path": "^0.12.7",
     "postcss-pxtorem": "^4.0.1",
     "postcss-reporter": "^6.0.0",
+    "prettier": "^1.17.0",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^8.3.0",
     "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript2": "^0.20.1",
     "rollup-plugin-uglify-es": "0.0.1",
     "rollup-stream": "^1.24.1",
     "stylelint": "^9.9.0",
+    "typescript": "^3.4.3",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
-  "dependencies": {
-    "jquery": "^3.3.1",
-    "jquery-mask-plugin": "^1.14.15",
-    "jquery-validation": "^1.19.0",
-    "overlayscrollbars": "^1.6.3"
-  }
+  "dependencies": {}
 }

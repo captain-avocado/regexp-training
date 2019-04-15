@@ -8,14 +8,14 @@
     opacity: 0;
     width: 0;
     height: 0;
-  
+
     &:checked + .switch__slider:before {
       transform: translate(20px, -50%);
     }
   }
 
   &__slider {
-    border: 1px solid rgba($purple, .28);
+    border: 1px solid rgba(aqua, 0.28);
     border-radius: 34px;
 
     position: absolute;
@@ -24,22 +24,22 @@
     left: 0;
     right: 0;
     bottom: 0;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 
     &:before {
       border-radius: 50%;
-      box-shadow: 0 0 12px $purple;
+      box-shadow: 0 0 12px aqua;
       position: absolute;
       content: "";
       height: 16px;
       width: 16px;
       left: 2px;
       top: 50%;
-      transform :translateY(-50%);
-      background-color: $purple;
-      -webkit-transition: .4s;
-      transition: .4s;
+      transform: translateY(-50%);
+      background-color: aqua;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
     }
   }
 }
