@@ -1,0 +1,38 @@
+.input {
+  &__text {
+    padding-left: 22px;
+  }
+
+  &__wrap {
+    width: 100%;
+    position: relative;
+  }
+
+  &__error {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--area {
+      transform: none;
+      top: 13px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid $text-main;
+    border-radius: 40px;
+    padding: 12px 20px;
+    font-size: 26px;
+    color: $text-main;
+    font-family: PlumbCondensed;
+
+    &--area {
+      resize: none;
+      padding: 20px;
+      min-height: 250px;
+    }
+  }
+}

@@ -48,7 +48,7 @@
               функционирования.</div>
           </div>
           <div class="intro__next">
-            <button class="intro__btn btn">Подробнее</button>
+            <button class="intro__btn btn" id="more">Подробнее</button>
             <img src="images/content/angle-next.svg" class="intro__angle-next"></img>
           </div>
         </div>
@@ -433,7 +433,7 @@
               ПРЕДЛОЖЕНИЕ,<br>ОТ КОТОРОГО НЕЛЬЗЯ ОТКАЗАТЬСЯ
             </div>
           </div>
-          <button class="special__btn btn btn--special">Получить</button>
+          <button class="special__btn btn btn--special" id="contact-popup">Получить</button>
         </div>
       </div>
     </section>
@@ -451,6 +451,12 @@
               <div class="footer__text">ОГРН 1177847226765 </div>
               <div class="footer__text">р/с 40702810855000018252</div>
             </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__row">
+              <a href="#" class="highlighted-orange">Политика
+                конфиденциальности</a></div>
+
           </div>
           <div class="footer__col">
             <div class="footer__row footer__row--email">
@@ -560,6 +566,96 @@
         <use xlink:href="./images/sprite.svg#contacts"></use>
       </svg>
       <span class="nav-bar__item-descr">Связаться</span>
+    </div>
+  </div>
+  <a href="#" class="logo logo--fixed" id="logo-fixed">
+    <img src="images/content/logo.svg" alt="">
+  </a>
+  <div class="popup popup--contact" id="popup-form">
+    <div class="popup__content">
+      <div class="popup__panel">
+        <a href="#" class="popup__trigger">
+          <img src="images/content/close.svg" alt="">
+        </a>
+        <div class="popup__inputs">
+          <div class="popup__input-row">
+            <label for="" class="popup__input input">
+              <div class="input__text">ФИО</div>
+              <div class="input__wrap">
+                <input placeholder="Овчинников" type="text" class="input__input">
+                <img src="images/content/error.svg" alt="" class="input__error">
+              </div>
+            </label>
+            <label for="" class="popup__input input">
+              <div class="input__text">Компания</div>
+              <div class="input__wrap">
+                <input placeholder="ОАО" type="text" class="input__input">
+                <img src="images/content/error.svg" alt="" class="input__error">
+              </div>
+            </label>
+          </div>
+          <div class="popup__input-row">
+            <label for="" class="popup__input input">
+              <div class="input__text">Телефон для связи</div>
+              <div class="input__wrap">
+                <input type="text" class="input__input">
+                <img src="images/content/error.svg" alt="" class="input__error">
+              </div>
+            </label>
+            <label for="" class="popup__input input">
+              <div class="input__text">E-mail</div>
+              <div class="input__wrap">
+                <input placeholder="contacts@company.com" type="text" class="input__input">
+                <img src="images/content/error.svg" alt="" class="input__error">
+              </div>
+            </label>
+          </div>
+          <div class="popup__input-row">
+            <label for="" class="popup__input input">
+              <div class="input__text">Сообщение</div>
+              <div class="input__wrap">
+                <textarea placeholder="Получить предложение" type="text"
+                  class="input__input input__input--area"></textarea>
+              </div>
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="popup__btn btn btn--submit">Отправить</button>
+      </div>
+    </div>
+  </div>
+  <div class="popup popup--contact">
+    <div class="popup__content">
+      <div class="popup__panel">
+        <a href="#" class="popup__trigger">
+          <img src="images/content/close.svg" alt="">
+        </a>
+        <div class="popup__text">Ошибка!</div>
+        <div class="popup__text">Ваше сообщение не было отправлено, попробуйте повторить позже или напишие нам на почту
+        </div>
+        <a href="mailto:support@webiraylab.com" class="popup__link">support@webiraylab.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="popup popup--contact">
+    <div class="popup__content">
+      <div class="popup__panel">
+        <a href="#" class="popup__trigger">
+          <img src="images/content/close.svg" alt="">
+        </a>
+        <div class="popup__text">Благодарим!</div>
+        <div class="popup__text">Ваше сообщение отправлено и совсем скоро будет обработано нами!
+        </div>
+      </div>
+      <div class="popup__panel popup__panel--next">
+        <div class="popup__next-wrap">
+          <div class="">А пока предлагаем посмотреть другие наши проекты и сервисы
+          </div>
+          <a href="#" class="popup__next">
+            <img src="images/content/next.svg" alt="" class="popup__icon">
+          </a>
+        </div>
+      </div>
     </div>
   </div>
   <script src="scripts/main.js"></script>

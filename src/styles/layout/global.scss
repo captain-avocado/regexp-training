@@ -41,8 +41,9 @@ button {
   border: none;
   background: none;
   padding: 0;
+  outline: none;
 }
 
-input {
+input, textarea {
   outline: none;
 }

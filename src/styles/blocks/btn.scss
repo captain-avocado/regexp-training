@@ -22,4 +22,12 @@
     padding: 20px 110px;
     font-size: 32px;
   }
+
+  &--submit {
+    background: $focus-title-bg;
+    width: 100%;
+    border-radius: 40px;
+    font-size: 32px;
+    padding: 20px;
+  }
 }
