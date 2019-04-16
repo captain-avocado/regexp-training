@@ -12,7 +12,9 @@ const rollupConfig = {
   // sourcemap: true,
   plugins: [
     sourceMaps(),
-    typescript(),
+    typescript({
+      tsconfig: "tsconfig.json",
+    }),
     resolveNodeModules(),
     //commonJs(),
     babel({

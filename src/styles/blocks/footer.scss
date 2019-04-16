@@ -1,0 +1,251 @@
+.footer {
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  font-family: 'PlumbCondensed';
+  position: relative;
+  font-size: 18px;
+
+  @include desktop-large {
+    font-size: 24px;
+  }
+
+  @include phones {
+    font-size: 16px;
+  }
+
+  &--advantages {
+    background-color: $bg-color;
+
+    & .footer__bottom-info {
+      color: $text-dark;
+    }
+  }
+
+  
+  &__top-part {
+    display: flex;
+    justify-content: space-between;
+    // font-size: 18px;
+    background-color: $bg-color;
+    padding: 75px 65px 75px 0;
+    position: relative;
+
+    @include laptops {
+      padding: 125px 65px 75px 0;
+    }
+
+    @include tablets {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-right: 0;
+    }
+
+    @include phones {
+      padding-bottom: 45px;
+      padding-top: 100px;
+    }
+
+    &:before {
+      content: "";
+      background-color: $bg-color;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 100%;
+      width: 999px;
+
+      @include laptops-small {
+        width: 8.8%;
+      }
+
+      @include tablets {
+        left: 100%;
+        right: auto;
+      }
+    }
+  }
+
+  &__socials {
+    position: absolute;
+    top: 70px;
+    right: -93px;
+
+    @include laptops {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 38px;
+      right: auto;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+
+    @include tablets {
+      width: 215px;
+    }
+
+    &:first-child {
+      @include tablets {
+        order: 1;
+        margin-bottom: 60px;
+      }
+    }
+
+    &--company {
+      @include phones {
+        font-size: 18px;
+        margin-bottom: 42px;
+      }
+    }
+  }
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+
+    &--pay-logos {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      @include tablets {
+        order: 0;
+        margin-bottom: 60px;
+      }
+
+      @include phones {
+        max-width: 193px;
+      }
+    }
+
+    &--contact-tels {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      @include tablets {
+        order: 2;
+        align-items: flex-start;
+      }
+
+      
+    }
+
+    &--email {
+      @include tablets {
+        order: 1;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: flex-end;
+    @include tablets {
+      justify-content: flex-start;
+    }
+
+    &--tel {
+      transform: translateX(-15px);
+      margin-bottom: 20px;
+      @include tablets {
+        transform: translateX(0);
+      }
+      &:first-child {
+        @include tablets {
+          transform: translateX(30px);
+        }
+      }
+    }
+
+    &--email {
+      @include tablets {
+        transform: translateX(30px);
+      }
+      
+    }
+  }
+
+  &__link {
+    &--politics {
+      margin-bottom: 10px;
+    }
+
+    &--politics, &--services {
+      display: flex;
+      align-items: center;
+
+      @include phones {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__link-text {
+    margin-right: 8px;
+  }
+
+  &__icon {
+    margin-right: 8px;
+    @include phones {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__link-icon {
+    @include phones {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__bottom-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px 0;
+    
+    @include phones {
+      padding: 17px 0 50px;
+    }
+  }
+
+  &__bottom-part {
+    position: relative;
+    color: $text-dark;
+  }
+
+  &__to-top {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -93px;
+  }
+
+  &__copyright {
+    @include tablets {
+      position: absolute;
+      top: -75%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include phones {
+      bottom: 113px;
+      font-size: 14px;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__author {
+    @include tablets {
+      margin: auto;
+    }
+  }
+}

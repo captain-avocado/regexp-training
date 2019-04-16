@@ -1,0 +1,13 @@
+.list {
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__icon {
+    margin-right: 30px;
+  }
+}

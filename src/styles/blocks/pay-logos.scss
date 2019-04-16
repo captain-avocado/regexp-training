@@ -1,0 +1,41 @@
+.pay-logos {
+  display: flex;
+
+  @include tablets {
+    width: 200px;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  @include phones {
+    width: auto;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 48px;
+      @include tablets {        
+        margin-right: 0;
+      }
+    }
+
+    @include tablets {
+      width: 50%;
+      padding: 0 15px;
+      margin-right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    width: 83px;
+    height: 46px;
+    fill: #fff;
+
+    &--maestro {
+      width: 100px;
+    }
+  }
+}

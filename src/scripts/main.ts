@@ -1,11 +1,4 @@
-import { menuSelect } from './modules/menu';
-menuSelect();
-
-const doc: Node = document.querySelector('body');
-console.log('hello', ': ', doc);
-
-const calcX = (): number => {
-  return 5;
-};
-
-calcX();
+import { initMenu } from './modules/menu';
+import { initToTop } from './modules/toTop';
+initMenu('nav-bar');
+initToTop('to-top');

@@ -1,0 +1,9 @@
+.levels-list {
+  margin: 0 -40px;
+  display: flex;
+
+  &__item {
+    width: 33.33%;
+    padding: 0 40px;
+  }
+}

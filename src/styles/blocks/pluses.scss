@@ -1,0 +1,31 @@
+.pluses {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+  }
+
+  &__title {
+    align-self: center;
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__info {
+    max-width: 510px;
+  }
+
+  &__descr {
+    margin-bottom: 60px;
+  }
+}

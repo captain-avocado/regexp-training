@@ -1,0 +1,40 @@
+body {
+  font-size: 24px;
+  color: $text-main;
+  font-family: 'PlumbCondensed';
+}
+
+.wrapper {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1380px;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.highlighted {
+  color: $highlighted;
+}
+
+.highlighted-orange {
+  color: $orange;
+}
+
+.animated-button {
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.black-animated {
+    transition: all .2s ease-in-out;
+}
+
+.animated-scale {
+    transition: all .2s ease-in-out;
+}

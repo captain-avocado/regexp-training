@@ -1,0 +1,15 @@
+.special {
+  
+  padding-bottom: 120px;
+
+  &__box {
+    border: 2px solid #2D29A7;
+    padding: 40px 160px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    max-width: 540px;
+  }
+}

@@ -1,0 +1,7 @@
+.client-list {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}

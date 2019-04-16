@@ -1,4 +1,35 @@
 @font-face {
-  font-family: 'SF';
-  src: url("../fonts/SF/SFUIText-Regular.woff") format("woff");
+    font-family: 'Plumb';
+    src: url("../fonts/Plumb/plumb-light.woff") format("woff");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Plumbcondensed';
+    src: url("../fonts/Plumb/plumbcondensed-regular.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Plumb';
+    src: url("../fonts/Plumb/plumb-medium.woff") format("woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Plumbcondensed';
+    src: url("../fonts/Plumb/plumbcondensed-bold.woff") format("woff");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Plumb';
+    src: url("../fonts/Plumb/plumb-black.woff") format("woff");
+    font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Plumbcondensed';
+  src: url("../fonts/Plumb/plumbsoft-black.woff") format("woff");
+  font-weight: 900;
 }

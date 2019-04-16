@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+
+
+  &__container {
+    padding: 20px 50px;
+    padding-right: 0;
+    background-color: $bg-block;
+    border-radius: 10px 0px 0px 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    &:after {
+      content: "";
+      background-color: $bg-block;
+      border-radius: 10px 0px 0px 10px;
+
+      position: absolute;
+      left: 100%;
+      top: 0;
+      bottom: 0;
+      width: 2000px;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    opacity: .5;
+  }
+}

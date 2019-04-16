@@ -1,0 +1,16 @@
+.contacts-row {
+  display: flex;
+  align-items: center;
+
+  &__icons {
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
