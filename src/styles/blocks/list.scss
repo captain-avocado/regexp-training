@@ -1,6 +1,7 @@
 .list {
   &__item {
     display: flex;
+    align-items: flex-start;
 
     &:not(:last-child) {
       margin-bottom: 30px;

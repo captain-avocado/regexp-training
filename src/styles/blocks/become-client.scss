@@ -4,18 +4,22 @@
   align-items: center;
   padding-bottom: 70px;
 
+  @include laptops-small {
+    padding-bottom: 20px;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  &__focus-title {
+  &__focus-title, &__angle-bottom {
     margin-bottom: 80px;
-  }
 
-  &__angle-bottom {
-    margin-bottom: 80px;
+    @include laptops-small {
+      margin-bottom: 40px;
+    }
   }
 
   &__text {

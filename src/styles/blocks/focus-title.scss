@@ -12,6 +12,10 @@
   font-weight: 600;
   text-align: center;
 
+  @include laptops-small {
+    font-size: 30px;
+  }
+
   &--intro {
     border-radius: 10px 0px 0px 10px;
     padding-right: 0;

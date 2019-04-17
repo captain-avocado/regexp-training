@@ -10,4 +10,8 @@
   &--thin {
     font-weight: 400;
   }
+
+  @include laptops-small {
+    font-size: 30px;
+  }
 }

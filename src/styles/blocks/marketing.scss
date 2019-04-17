@@ -31,6 +31,10 @@
       background: linear-gradient(90deg, rgba(20, 20, 28, 0.8) 21.56%, rgba(20, 20, 28, 0) 92.34%);
       z-index: 10;
     }
+
+    @include laptops-small {
+      padding: 70px 0;
+    }
   }
 
   &__text {

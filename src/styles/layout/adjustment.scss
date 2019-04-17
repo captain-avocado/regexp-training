@@ -9,8 +9,12 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   max-width: 1380px;
+
+  @include laptops-small {
+    width: 85%;
+  }
 }
 
 .section {
@@ -25,6 +29,30 @@ body {
 .highlighted-orange {
   color: $orange;
 }
+
+.mobile-hidden {
+  @include laptops-small {
+    display: none !important;
+  }
+}
+
+.desktop-hidden {
+  @include from-laptops-small {
+    display: none !important;
+  }
+}
+
+.fade {
+  transition: opacity .3s, visibility .3s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 
 .animated-button {
     cursor: pointer;

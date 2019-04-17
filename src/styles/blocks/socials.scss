@@ -1,6 +1,6 @@
 .socials {
 
-  @include laptops {
+  @include laptops-small {
     display: flex;
   }
 
@@ -11,7 +11,7 @@
   &__item {
     &:not(:last-child) {
       margin-bottom: 20px;
-      @include laptops {
+      @include laptops-small {
         margin-bottom: 0;
         margin-right: 20px;
       }
@@ -37,6 +37,11 @@
     transition: fill .25s;
     &:hover {
       // fill: #fff;
+    }
+    
+    &--big {
+      width: 36px;
+      height: 36px;
     }
   }
 }

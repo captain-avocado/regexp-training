@@ -8,6 +8,11 @@
     &--vis {
       padding-top: 90px;
       padding-bottom: 300px;
+
+      @include laptops-small {
+        padding-bottom: 120px;
+        padding-top: 50px;
+      }
     }
   }
 
@@ -28,10 +33,20 @@
   }
 
   &__img {
+    
+    @include laptops-large {
+      width: 310px;
+    }
+
     &--abs {
       position: absolute;
       right: 0;
       top: 90px;
+
+      @include laptops-large {
+        width: 900px;
+        right: -175px;
+      }
     }
   }
 }

@@ -1,0 +1,12 @@
+.burger {
+  position: relative;
+  display: flex;
+  z-index:  150;
+
+   &__dropdown {
+    position: absolute;
+    right: -13px;
+    top: -13px;
+    z-index: 150;
+  }
+}

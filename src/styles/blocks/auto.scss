@@ -19,10 +19,39 @@
 
     &:not(:last-child) {
       margin-bottom: 100px;
+      @include laptops-small {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include laptops-small {
+      flex-direction: column;
     }
   }
 
   &__descr {
     max-width: 540px;
+
+    @include laptops-small {
+      max-width: 460px;
+    }
+
+    &--list {
+      @include laptops-small {
+        align-self: center;
+      }
+    }
+  }
+
+  &__img {
+    @include laptops-middle {
+      width: 330px;
+    }
+  }
+
+  &__info-img {
+    @include laptops-small {
+      align-self: center;
+    }
   }
 }

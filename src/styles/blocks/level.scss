@@ -23,9 +23,27 @@
     font-weight: 600;
     padding: 15px 45px 35px;
     border-bottom: 2px solid #2D29A7;
+
+    @include laptops-large {
+      padding: 15px 30px 35px;
+      font-size: 20px;
+    }
+
+    @include laptops-small {
+      padding: 15px 15px 35px;
+    }
   }
 
   &__descr {
     padding-top: 60px;
   }
+
+  &__text {
+    line-height: normal;
+    color: $text-dark;
+    @include laptops-large {
+      font-size: 20px;
+    }
+  }
+  
 }

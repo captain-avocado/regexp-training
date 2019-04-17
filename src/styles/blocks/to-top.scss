@@ -4,7 +4,7 @@
     height: 32px;
     fill: $orange;
 
-    @include laptops {
+    @include laptops-small {
       display: none;
     }
 

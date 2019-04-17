@@ -15,5 +15,21 @@
     display: flex;
     justify-content: center;
     margin-bottom: 120px;
+
+    @include laptops-small {
+      margin-bottom: 50px;
+    }
   }
+
+  &__img {
+    @include laptops-large {
+      height: 668px;
+      width: 1080px;
+    }
+    @include laptops-small {
+      width: 800px;
+      height: 490px;
+    }
+  }
+  
 }

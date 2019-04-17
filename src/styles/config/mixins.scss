@@ -1,10 +1,10 @@
-@mixin laptops {
-  @media (max-width: 1112px) {
-    @content;
-  }
-}
+// @mixin laptops {
+//   @media (max-width: 1112px) {
+//     @content;
+//   }
+// }
 
-@mixin from-laptops {
+@mixin from-laptops-small {
   @media (min-width: 1113px) {
     @content;
   }

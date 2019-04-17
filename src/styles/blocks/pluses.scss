@@ -8,6 +8,10 @@
   &__title {
     align-self: center;
     margin-bottom: 30px;
+
+    @include laptops-small {
+      margin-bottom: 0;
+    }
   }
 
   &__content {
@@ -27,5 +31,14 @@
 
   &__descr {
     margin-bottom: 60px;
+    @include laptops-small {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__img {
+    @include laptops-middle {
+      width: 315px;
+    }
   }
 }

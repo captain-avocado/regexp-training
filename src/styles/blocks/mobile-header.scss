@@ -1,0 +1,20 @@
+.mobile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  background-color: $bg-block;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+}

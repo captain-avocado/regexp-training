@@ -11,7 +11,7 @@
 
 <body>
   <div class="wrapper">
-    <div class="header">
+    <div class="header mobile-hidden">
       <div class="header__container container">
         <div class="header__col">
           <div class="header__contacts">
@@ -30,7 +30,70 @@
             </div>
           </div>
         </div>
-        <div class="header__text">Автоматизация и учет данных под ключ с учетом особенностей ниши</div>
+        <div class="header__text text">Автоматизация и учет данных под ключ с учетом особенностей ниши</div>
+      </div>
+    </div>
+    <div class="mobile-header desktop-hidden">
+      <div class="mobile-header__container container">
+        <a href="#" class="mobile-header__logo logo" id="logo-mobile">
+          <img src="images/content/logo.svg" alt="" class="logo__img">
+        </a>
+        <div class="mobile-header__text text text--opacity">Автоматизация и учет данных под ключ с учетом особенностей
+          ниши</div>
+        <div class="mobile-header__burger burger">
+          <a href="#" class="burger__trigger" id="burger">
+            <img src="images/content/burger.svg" alt="" class="burger__img">
+          </a>
+          <div class="burger__dropdown dropdown fade hidden">
+            <a class="dropdown__trigger">
+              <img src="images/content/dropdown.svg" alt="" class="dropdown__icon">
+            </a>
+            <ul class="dropdown__menu dropdown-menu">
+              <li class="dropdown-menu__item">
+                Об автоматизации
+              </li>
+              <li class="dropdown-menu__item">
+                Преимущества
+              </li>
+              <li class="dropdown-menu__item">
+                Наше предложение
+              </li>
+              <li class="dropdown-menu__item">
+                Связаться
+              </li>
+            </ul>
+            <ul class="dropdown__socials socials">
+              <li class="socials__item">
+                <a href="https://vk.com/webiraylab" class="socials__link">
+                  <svg class="socials__icon socials__icon--big">
+                    <use xlink:href="images/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="https://www.facebook.com/webiraylab/" class="socials__link">
+                  <svg class="socials__icon socials__icon--big">
+                    <use xlink:href="images/sprite.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="https://www.instagram.com/webiraylab/" class="socials__link">
+                  <svg class="socials__icon socials__icon--big">
+                    <use xlink:href="images/sprite.svg#inst"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="https://www.youtube.com/channel/UCRLdjo_FJfBD2M_5rTybkrw" class="socials__link">
+                  <svg class="socials__icon socials__icon--big">
+                    <use xlink:href="images/sprite.svg#yt"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <section class="section section--intro intro">
@@ -75,7 +138,7 @@
           </div>
         </div>
         <div class="auto__row-info auto__row-info--center">
-          <div class="auto__descr">
+          <div class="auto__descr auto__descr--list">
             <div class="text text--dark">
               <p><span class="highlighted">Автоматизированная станция «Кассир»</span> – это инновационный продукт,
                 представляющий собой
@@ -123,13 +186,13 @@
       <div class="pluses__container container">
         <div class="pluses__title text-title">Наши преимущества</div>
         <div class="pluses__content">
-          <div class="pluses__col">
+          <div class="pluses__col mobile-hidden">
             <img src="images/content/pluses.svg" alt="" class="pluses__img">
           </div>
           <div class="pluses__col">
             <div class="pluses__info">
               <div class="pluses__descr">
-                <div class="pluses__title text-title text-title--thin">Виртуальный администратор</div>
+                <div class="pluses__title text-title text-title--thin mobile-hidden">Виртуальный администратор</div>
                 <div class="text text--dark">
                   <p>
                     Создание виртуального администратора позволяет сократить лишние рабочие
@@ -190,11 +253,11 @@
                   <ul class="level__descr-list list">
                     <li class="list__item">
                       <img src="images/content/item.svg" class="list__icon"></img>
-                      <div class="text text--dark">Базовые права по работе с посетителями</div>
+                      <div class="level__text">Базовые права по работе с посетителями</div>
                     </li>
                     <li class="list__item">
                       <img src="images/content/item.svg" class="list__icon"></img>
-                      <div class="text text--dark">Накопление статистических данных
+                      <div class="level__text">Накопление статистических данных
                       </div>
                     </li>
                   </ul>
@@ -208,21 +271,21 @@
                   <ul class="level__descr-list list">
                     <li class="list__item">
                       <img src="images/content/item.svg" class="list__icon"></img>
-                      <div class="text text--dark">Весь функционал предыдущего модуля</div>
+                      <div class="level__text">Весь функционал предыдущего модуля</div>
                     </li>
                     <li class="list__item">
                       <img src="images/content/item.svg" class="list__icon"></img>
-                      <div class="text text--dark">Возможность редактирования стоимости услуг и скидок
+                      <div class="level__text">Возможность редактирования стоимости услуг и скидок
                       </div>
                     </li>
                     <li class="list__item">
                       <img src="images/content/item.svg" class="list__icon"></img>
-                      <div class="text text--dark">Расширенный доступ к статистике
+                      <div class="level__text">Расширенный доступ к статистике
                       </div>
                     </li>
                     <li class="list__item">
                       <img src="images/content/item.svg" class="list__icon"></img>
-                      <div class="text text--dark">Редактирование виртуального администратора
+                      <div class="level__text">Редактирование виртуального администратора
                       </div>
                     </li>
                   </ul>
@@ -236,16 +299,17 @@
                   <ul class="level__descr-list list">
                     <li class="list__item">
                       <img src="images/content/item.svg" class="list__icon"></img>
-                      <div class="text text--dark">Весь функционал предыдущего модуля</div>
+                      <div class="level__text">Весь функционал предыдущего модуля</div>
                     </li>
                     <li class="list__item">
                       <img src="images/content/item.svg" class="list__icon"></img>
-                      <div class="text text--dark">Редактирование полномочий виртуального и старшего администраторов
+                      <div class="level__text">Редактирование полномочий виртуального и старшего
+                        администраторов
                       </div>
                     </li>
                     <li class="list__item">
                       <img src="images/content/item.svg" class="list__icon"></img>
-                      <div class="text text--dark">Полный доступ
+                      <div class="level__text">Полный доступ
                         к статистическим данным
                       </div>
                     </li>
@@ -418,10 +482,12 @@
         <div class="become-client__angle-bottom">
           <img src="images/content/angle-bottom.svg" alt="">
         </div>
-        <div class="become-client__text become-client__text--pd">Существует только 1 проблема - разработка системы
+        <div class="become-client__text become-client__text--pd text text--dark">Существует только 1 проблема -
+          разработка системы
           автоматизации предполагает доскональное изучение всех процессов
           бизнеса, чтобы максимально соответствовать всем требованиям и потребностям клиента.</div>
-        <div class="become-client__text">С этой проблемой мы справились на 10 из 10. Сначала мы изучаем - потом
+        <div class="become-client__text text text--dark">С этой проблемой мы справились на 10 из 10. Сначала мы изучаем
+          - потом
           автоматизируем.</div>
       </div>
     </section>
@@ -430,7 +496,7 @@
         <div class="special__box">
           <div class="special__left">
             <div class="special__text text text--dark text--special">
-              ПРЕДЛОЖЕНИЕ,<br>ОТ КОТОРОГО НЕЛЬЗЯ ОТКАЗАТЬСЯ
+              ПРЕДЛОЖЕНИЕ, ОТ КОТОРОГО НЕЛЬЗЯ ОТКАЗАТЬСЯ
             </div>
           </div>
           <button class="special__btn btn btn--special" id="contact-popup">Получить</button>
@@ -452,10 +518,42 @@
               <div class="footer__text">р/с 40702810855000018252</div>
             </div>
           </div>
-          <div class="footer__col">
+          <div class="footer__col footer__col--center">
             <div class="footer__row">
               <a href="#" class="highlighted-orange">Политика
                 конфиденциальности</a></div>
+            <div class="footer__row">
+              <ul class="socials desktop-hidden">
+                <li class="socials__item">
+                  <a href="https://vk.com/webiraylab" class="socials__link">
+                    <svg class="socials__icon">
+                      <use xlink:href="images/sprite.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a href="https://www.facebook.com/webiraylab/" class="socials__link">
+                    <svg class="socials__icon">
+                      <use xlink:href="images/sprite.svg#fb"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a href="https://www.instagram.com/webiraylab/" class="socials__link">
+                    <svg class="socials__icon">
+                      <use xlink:href="images/sprite.svg#inst"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a href="https://www.youtube.com/channel/UCRLdjo_FJfBD2M_5rTybkrw" class="socials__link">
+                    <svg class="socials__icon">
+                      <use xlink:href="images/sprite.svg#yt"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
 
           </div>
           <div class="footer__col">
@@ -483,7 +581,7 @@
               </div>
             </div>
           </div>
-          <ul class="footer__socials socials">
+          <ul class="footer__socials socials mobile-hidden">
             <li class="socials__item">
               <a href="https://vk.com/webiraylab" class="socials__link">
                 <svg class="socials__icon">
@@ -538,7 +636,7 @@
       </div>
     </footer>
   </div>
-  <div class="nav-bar" id="nav-bar">
+  <div class="nav-bar mobile-hidden" id="nav-bar">
     <div class="nav-bar__item">
       <svg class="nav-btn nav-active animated-scale" width="30" height="32" viewBox="0 0 30 32" fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -568,7 +666,7 @@
       <span class="nav-bar__item-descr">Связаться</span>
     </div>
   </div>
-  <a href="#" class="logo logo--fixed" id="logo-fixed">
+  <a href="#" class="logo logo--fixed mobile-hidden" id="logo-fixed">
     <img src="images/content/logo.svg" alt="">
   </a>
   <div class="popup popup--contact" id="popup-form">

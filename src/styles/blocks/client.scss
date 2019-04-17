@@ -11,6 +11,12 @@
   
   &__container {
     padding: 120px;
+    @include laptops-large {
+      padding: 120px 0;
+    }
+    @include laptops-small {
+      padding: 50px 0;
+    }
   }
 
 

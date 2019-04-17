@@ -25,5 +25,8 @@
     line-height: normal;
     color: $text-subtitle;
     margin-bottom: 60px;
+    @include laptops-small {
+      margin-bottom: 30px;
+    }
   }
 }
