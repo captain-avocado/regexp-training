@@ -669,7 +669,7 @@
   <a href="#" class="logo logo--fixed mobile-hidden" id="logo-fixed">
     <img src="images/content/logo.svg" alt="">
   </a>
-  <div class="popup popup--contact" id="popup-form">
+  <form class="popup popup--contact" id="popup-form">
     <div class="popup__content">
       <div class="popup__panel">
         <a href="#" class="popup__trigger">
@@ -680,15 +680,15 @@
             <label for="" class="popup__input input">
               <div class="input__text">ФИО</div>
               <div class="input__wrap">
-                <input placeholder="Овчинников" type="text" class="input__input">
-                <img src="images/content/error.svg" alt="" class="input__error">
+                <input placeholder="Овчинников" type="text" class="input__input required">
+                <img src="images/content/error.svg" alt="" class="input__error fade hidden">
               </div>
             </label>
             <label for="" class="popup__input input">
               <div class="input__text">Компания</div>
               <div class="input__wrap">
-                <input placeholder="ОАО" type="text" class="input__input">
-                <img src="images/content/error.svg" alt="" class="input__error">
+                <input placeholder="ОАО" type="text" class="input__input required">
+                <img src="images/content/error.svg" alt="" class="input__error fade hidden">
               </div>
             </label>
           </div>
@@ -696,15 +696,15 @@
             <label for="" class="popup__input input">
               <div class="input__text">Телефон для связи</div>
               <div class="input__wrap">
-                <input type="text" class="input__input" id="phone">
-                <img src="images/content/error.svg" alt="" class="input__error">
+                <input type="text" class="input__input required phone" id="phone">
+                <img src="images/content/error.svg" alt="" class="input__error fade hidden">
               </div>
             </label>
             <label for="" class="popup__input input">
               <div class="input__text">E-mail</div>
               <div class="input__wrap">
-                <input placeholder="contacts@company.com" type="text" class="input__input">
-                <img src="images/content/error.svg" alt="" class="input__error">
+                <input placeholder="contacts@company.com" type="text" class="input__input required email">
+                <img src="images/content/error.svg" alt="" class="input__error fade hidden">
               </div>
             </label>
           </div>
@@ -721,7 +721,7 @@
         <button type="submit" class="popup__btn btn btn--submit">Отправить</button>
       </div>
     </div>
-  </div>
+  </form>
   <div class="popup popup--contact">
     <div class="popup__content">
       <div class="popup__panel">
