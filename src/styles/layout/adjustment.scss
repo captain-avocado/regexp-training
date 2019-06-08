@@ -1,68 +1,10 @@
 body {
-  font-size: 24px;
-  color: $text-main;
-  font-family: 'PlumbCondensed';
+  font-size: 18px;
+  color: $main-color;
+  font-family: 'Lato';
 }
 
-.wrapper {
-  overflow-x: hidden;
+.wrapper { 
+  margin: 40px;
 }
 
-.container {
-  width: 80%;
-  max-width: 1380px;
-
-  @include laptops-small {
-    width: 85%;
-  }
-}
-
-.section {
-  display: flex;
-  justify-content: center;
-}
-
-.highlighted {
-  color: $highlighted;
-}
-
-.highlighted-orange {
-  color: $orange;
-}
-
-.mobile-hidden {
-  @include laptops-small {
-    display: none !important;
-  }
-}
-
-.desktop-hidden {
-  @include from-laptops-small {
-    display: none !important;
-  }
-}
-
-.fade {
-  transition: opacity .3s, visibility .3s;
-  opacity: 1;
-  visibility: visible;
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-
-.animated-button {
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-}
-
-.black-animated {
-    transition: all .2s ease-in-out;
-}
-
-.animated-scale {
-    transition: all .2s ease-in-out;
-}

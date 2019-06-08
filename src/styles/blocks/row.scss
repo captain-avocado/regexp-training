@@ -1,0 +1,19 @@
+.row {
+
+  &__input-area {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    margin-right: 15px;
+  }
+
+  &__descr {
+    margin-bottom: 15px;
+  }
+
+  &__code {
+    margin-bottom: 15px;
+  }
+}
